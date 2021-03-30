@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages {
         stage('Example') {
-            script {
-                def channels = params.CHANNELS.split(",")
-                channels.each { channel ->
-                    steps {
+            steps {
+                script {
+                    def channels = params.CHANNELS.split(",")
+                    channels.each { channel ->
                         echo "Your choice is ${channel}"
                     }
-                 }
+                }
              }
         }
     }
