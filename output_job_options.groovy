@@ -6,6 +6,7 @@ pipeline {
             def channels = params.CHANNELS.split(",")
             channels.each { channel ->
                 shell('echo ${channel}!')
+            }
         }
     }
 
