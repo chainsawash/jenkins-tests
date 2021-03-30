@@ -4,11 +4,9 @@ pipeline {
     stages {
         stage('Getting options') {
             steps {
-                script {
-                    def channels = params.CHANNELS.split(",")
-                    channels.each { channel ->
-                        shell('echo ${channel}')
-                    }
+                def channels = params.CHANNELS.split(",")
+                channels.each { channel ->
+                    sh 'echo "Item is $channel"'
                 }
             }
         }
