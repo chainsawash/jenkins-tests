@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Getting options') {
-            step {
+            steps {
                 script {
                     def channels = params.CHANNELS.split(",")
                     channels.each { channel ->
