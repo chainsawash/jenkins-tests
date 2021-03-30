@@ -3,16 +3,12 @@ pipeline {
 
     stages {
         stage('Getting options') {
-            def channels = params.CHANNELS.split(",")
-            channels.each { channel ->
-                shell('echo ${channel}!')
+            steps {
+                def channels = params.CHANNELS.split(",")
+                channels.each { channel ->
+                    echo ${channel}
+                }
             }
-        }
-    }
-
-    post{
-        success{
-            echo "Done :)"
         }
     }
 }
