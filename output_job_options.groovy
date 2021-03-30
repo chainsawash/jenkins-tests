@@ -1,10 +1,11 @@
 pipeline {
     agent any
 
-    stage('Getting options') {
-        def channels = params.CHANNELS.split(",")
-        channels.each { channel ->
-          shell('echo ${channel}!')
+    stages {
+        stage('Getting options') {
+            def channels = params.CHANNELS.split(",")
+            channels.each { channel ->
+                shell('echo ${channel}!')
         }
     }
 
