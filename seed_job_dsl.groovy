@@ -37,7 +37,7 @@ pipelineJob('job-with-options') {
     cpsScm {
       scm {
         git {
-          branch('master')
+          branch('main')
           remote {
             url('https://github.com/chainsawash/jenkins-tests')
           }
