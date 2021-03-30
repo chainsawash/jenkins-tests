@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def channels = params.CHANNELS.split(",")
                     channels.each { channel ->
-                        echo ${channel}
+                        shell('echo ${channel}')
                     }
                 }
             }
