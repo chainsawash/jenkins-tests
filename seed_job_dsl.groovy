@@ -35,7 +35,6 @@ pipelineJob('job-with-options') {
 
   definition {
     cpsScm {
-      lightweight(true)
       scm {
         git {
           branch('master')
